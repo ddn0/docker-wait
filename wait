@@ -31,7 +31,7 @@ do
   [ -n "${port}" ]
   echo -n "Waiting for ${uri}  ."
   seconds=0
-  while [ "$seconds" -lt "$timeout" ] && ! nc -z -w1 $host $port
+  while [ "$seconds" -lt "$timeout" ] && ! nc -w 1 $host $port
   do
     echo -n .
     seconds=$((seconds+1))
